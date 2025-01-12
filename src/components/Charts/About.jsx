@@ -57,7 +57,7 @@ const About = ({ id }) => {
         <div className="min-h-screen p-12">
 
             <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 mb-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-4">About {name}</h1>
+                <h1 className="text-3xl font-semibold text-gray-800 mb-4">About {name}</h1>
 
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">What is {name}?</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
@@ -87,7 +87,7 @@ const About = ({ id }) => {
                 <div>
                     <h2 className="text-2xl font-bold text-gray-800 mb-6">Already Holding {name}?</h2>
 
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                         <div className=" bg-gradient-to-b from-teal-400 to-cyan-700 p-6 rounded-lg flex items-center shadow-md">
                             <div className="mr-4">
                                 <Image
@@ -98,9 +98,9 @@ const About = ({ id }) => {
                                     alt="investing"
                                 />
                             </div>
-                            <div className="text-gray-100">
+                            <div className="text-white">
                                 <h3 className="text-xl font-semibold ">Calculate your Profits</h3>
-                                <button className=" font-medium mt-2 flex items-center">
+                                <button className=" font-medium mt-2 flex items-center bg-white text-black rounded-lg px-4 py-1">
                                     Check Now →
                                 </button>
                             </div>
@@ -116,9 +116,9 @@ const About = ({ id }) => {
                                     alt="liability"
                                 />
                             </div>
-                            <div className="text-gray-100">
+                            <div className="text-white">
                                 <h3 className="text-xl font-semibold">Calculate your Tax Liability</h3>
-                                <button className="font-medium mt-2 flex items-center">
+                                <button className="font-medium mt-2 flex items-center bg-white text-black rounded-lg px-4 py-1">
                                     Check Now →
                                 </button>
                             </div>

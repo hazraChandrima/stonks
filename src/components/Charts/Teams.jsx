@@ -11,7 +11,7 @@ const Teams = () => {
 
     return (
         <div className="max-w-5xl px-8 py-8 bg-white rounded-xl mt-12 shadow-md mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Team</h2>
+            <h2 className="text-2xl font-semibold mb-4">Team</h2>
             <p className="text-gray-600 mb-8 text-sm">
                 Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu nibh. Eget mattis in
                 mi integer sit egestas. Proin tempor id pretium quam. Facilisis purus convallis quam augue.
@@ -19,7 +19,7 @@ const Teams = () => {
             <div className="flex flex-col space-y-6">
                 {teamMembers.map((member) => (
                     <div
-                        className="bg-sky-100 px-5 py-4 rounded-lg flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6"
+                        className="bg-[#e8f6ff] px-5 py-4 rounded-lg flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6"
                         key={member.id}
                     >
 

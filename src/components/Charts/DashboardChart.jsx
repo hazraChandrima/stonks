@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+
 const DashboardChart = ({ id }) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -39,7 +40,7 @@ const DashboardChart = ({ id }) => {
 
     return (
         <div className="py-12 px-4">
-            <div className="mx-auto bg-white shadow-md rounded-xl p-8">
+            <div className="mx-auto max-w-5xl bg-white shadow-md rounded-xl p-8">
                 <div className="flex flex-col gap-8">
                     <PerformanceSection data={data} weekHighLow={weekHighLow} />
                     <FundamentalsSection data={data} />
@@ -71,7 +72,7 @@ const PerformanceSection = ({ data, weekHighLow }) => {
 
     return (
         <div className="flex-1">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">Performance</h1>
+            <h1 className="text-2xl font-semibold text-gray-800 mb-4">Performance</h1>
             <ProgressBar
                 labelLow="Today's Low"
                 valueLow={formatCurrency(low_24h.usd)}
@@ -124,7 +125,7 @@ const FundamentalsSection = ({ data }) => {
 
     return (
         <div className="flex-1">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">Fundamentals</h1>
+            <h1 className="text-xl font-semibold text-gray-700 mb-6">Fundamentals</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-800">
                 {fundamentals.map((item, index) => (
                     <div key={index} className="mr-8">

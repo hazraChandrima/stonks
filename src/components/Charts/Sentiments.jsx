@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { NewspaperIcon } from "@heroicons/react/24/solid";
+
 
 const Sentiments = () => {
     const prevRef = useRef(null);
@@ -59,7 +61,7 @@ const Sentiments = () => {
                                 <div className="bg-blue-50 p-4 rounded-xl w-full">
                                     <div className="flex items-start mb-2">
                                         <div className="flex-shrink-0 bg-blue-600 text-white p-2 rounded-full">
-                                            📄
+                                            <NewspaperIcon className="w-6 h-6 text-gray-100"/>
                                         </div>
                                         <div className="ml-3">
                                             <h4 className="font-semibold text-blue-900 mb-1">
@@ -80,23 +82,23 @@ const Sentiments = () => {
             </div>
 
             <div>
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex space-x-4 items-center mb-4">
                     <h3 className="text-lg font-medium text-gray-700">Analyst Estimates</h3>
                     <i className="text-gray-400 cursor-pointer" title="Information">ℹ️</i>
                 </div>
                 <div className="flex items-center gap-8">
 
-                    <div className="relative w-28 h-28 rounded-full bg-green-50 flex items-center justify-center">
-                        <span className="text-green-600 text-xl font-bold">76%</span>
+                    <div className="relative w-28 h-28 rounded-full bg-teal-50 flex items-center justify-center">
+                        <span className="text-teal-600 text-xl font-bold">76%</span>
                     </div>
 
                     <div className="w-3/4">
                         <div className="flex justify-between text-sm mb-2">
-                            <p className="text-green-600">Buy</p>
-                            <p className="text-green-600">76%</p>
+                            <p className="text-teal-600">Buy</p>
+                            <p className="text-teal-600">76%</p>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full mb-4">
-                            <div className="h-full bg-green-500 rounded-full" style={{ width: "76%" }} />
+                            <div className="h-full bg-teal-500 rounded-full" style={{ width: "76%" }} />
                         </div>
 
                         <div className="flex justify-between text-sm mb-2">

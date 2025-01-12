@@ -1,11 +1,10 @@
 import React from "react";
 
-
 const Tokenomics = () => {
     return (
         <div className="font-sans bg-white mt-12 rounded-xl shadow-md p-6 max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-5">Tokenomics</h2>
-            <h3 className="text-lg font-bold mb-3">Initial Distribution</h3>
+            <h2 className="text-2xl font-semibold mb-5">Tokenomics</h2>
+            <h3 className="text-lg font-semibold mb-3">Initial Distribution</h3>
             <div className="flex items-center mb-5">
                 <div
                     className="relative w-36 h-36 rounded-full mr-5"
