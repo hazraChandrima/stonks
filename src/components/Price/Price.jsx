@@ -48,7 +48,7 @@ function PriceWidget({id}) {
     const coinData = data[id];
     return (
         <div className="p-4 bg-white">
-            <div className="mt-5">
+            <div>
                 <span className="text-3xl font-semibold">${coinData.usd}</span>
                 <span className="font-medium text-sm ml-4 text-gray-700">
                     <span
