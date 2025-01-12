@@ -55,11 +55,10 @@ const About = ({ id }) => {
 
     return (
         <div className="min-h-screen p-12">
-            {/* About Section */}
+
             <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 mb-8">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">About {name}</h1>
 
-                {/* What is section */}
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">What is {name}?</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
                     {name}'s price today is <strong>${current_price.usd.toLocaleString()}</strong>, with a 24-hour trading volume of <strong>${total_volume.usd.toLocaleString()}</strong>. {name} is{" "}
@@ -68,7 +67,7 @@ const About = ({ id }) => {
                     {max_supply ? <strong>{max_supply.toLocaleString()}</strong> : "unlimited"}.
                 </p>
                 <div className="border-b border-gray-400 w-full my-4"></div>
-                {/* Placeholder Text */}
+
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">Lorem ipsum dolor sit amet</h2>
                 <p className="text-gray-600 leading-relaxed">
                     Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis tristique pharetra. Diam id et lectus urna
@@ -88,9 +87,7 @@ const About = ({ id }) => {
                 <div>
                     <h2 className="text-2xl font-bold text-gray-800 mb-6">Already Holding {name}?</h2>
 
-                    {/* Cards */}
                     <div className="grid grid-cols-2 gap-6">
-                        {/* Card 1 */}
                         <div className=" bg-gradient-to-b from-teal-400 to-cyan-700 p-6 rounded-lg flex items-center shadow-md">
                             <div className="mr-4">
                                 <Image
@@ -109,7 +106,6 @@ const About = ({ id }) => {
                             </div>
                         </div>
 
-                        {/* Card 2 */}
                         <div className="bg-gradient-to-b from-orange-400 to-red-700 p-6 rounded-lg flex items-center shadow-md">
                             <div className="mr-4">
                                 <Image

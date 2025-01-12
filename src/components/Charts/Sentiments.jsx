@@ -4,7 +4,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-// Heroicons: Chevron Circle Icons
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const Sentiments = () => {
@@ -13,17 +12,14 @@ const Sentiments = () => {
 
     return (
         <div className="p-8 bg-white rounded-lg shadow-lg w-full max-w-5xl mx-auto mt-12">
-            {/* Sentiment Section */}
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Sentiment</h2>
 
-            {/* Key Events */}
             <div className="mb-8 relative">
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-medium text-gray-700">Key Events</h3>
                     <i className="text-gray-400 cursor-pointer" title="Information">ℹ️</i>
                 </div>
 
-                {/* Custom Navigation Buttons */}
                 <button
                     ref={prevRef}
                     className="absolute z-30 top-1/2 -left-6 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
@@ -83,19 +79,17 @@ const Sentiments = () => {
                 </Swiper>
             </div>
 
-            {/* Analyst Estimates Section */}
             <div>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-medium text-gray-700">Analyst Estimates</h3>
                     <i className="text-gray-400 cursor-pointer" title="Information">ℹ️</i>
                 </div>
                 <div className="flex items-center gap-8">
-                    {/* Circular Buy Percentage */}
+
                     <div className="relative w-28 h-28 rounded-full bg-green-50 flex items-center justify-center">
                         <span className="text-green-600 text-xl font-bold">76%</span>
                     </div>
 
-                    {/* Analyst Bar Chart */}
                     <div className="w-3/4">
                         <div className="flex justify-between text-sm mb-2">
                             <p className="text-green-600">Buy</p>

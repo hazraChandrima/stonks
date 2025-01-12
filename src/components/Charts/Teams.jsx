@@ -22,7 +22,7 @@ const Teams = () => {
                         className="bg-sky-100 px-5 py-4 rounded-lg flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6"
                         key={member.id}
                     >
-                        {/* Image and Member Info */}
+
                         <div className="flex-shrink-0">
                             <Image
                                 src={member.image}
@@ -34,7 +34,6 @@ const Teams = () => {
                             <h3 className="text-md text-center font-semibold">{member.name}</h3>
                             <p className="text-xs text-center text-gray-500">{member.designation}</p>
                         </div>
-                        {/* Text Content */}
                             <p className="text-gray-800 text-sm">
                                 Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut
                                 libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis

@@ -27,7 +27,7 @@ function TradingViewWidget({id}) {
         };
 
         fetchidData();
-    }, [id]); // Add `id` as a dependency
+    }, [id]); 
 
     const idSymbol = data?.symbol?.toUpperCase(); 
 
@@ -53,7 +53,7 @@ function TradingViewWidget({id}) {
           "hide_volume": true
         }
       `;
-            containerRef.current.innerHTML = ""; // Clear any existing content
+            containerRef.current.innerHTML = ""; 
             containerRef.current.appendChild(script);
         }
 
@@ -62,7 +62,7 @@ function TradingViewWidget({id}) {
                 containerRef.current.innerHTML = "";
             }
         };
-    }, [idSymbol]); // Add `idSymbol` as a dependency
+    }, [idSymbol]); 
     
 
     if (loading) return <div>Loading...</div>;
@@ -70,7 +70,7 @@ function TradingViewWidget({id}) {
 
     return (
         <div className="bg-white p-5 w-fit rounded-lg shadow-md">
-            {/* Header Section */}
+
             <div className="flex items-center gap-4">
                 <img
                     src={data?.image?.large || "default-image-url.png"}
@@ -85,10 +85,8 @@ function TradingViewWidget({id}) {
                 </div>
             </div>
 
-            {/* Price Section */}
             <PriceWidget id={id} />
 
-            {/* TradingView Chart */}
             <div className="mt-5">
                 <div
                     className="tradingview-widget-container w-full max-w-4xl mx-auto"

@@ -5,14 +5,13 @@ function TrendingCoinsCard() {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        // Fetch trending coins from CoinGecko API
+
         const fetchTrendingCoins = async () => {
             try {
                 const response = await fetch(
                     "https://api.coingecko.com/api/v3/search/trending"
                 );
                 const data = await response.json();
-                // Extract top 3 coins
                 const topThreeCoins = data.coins.slice(0, 3);
                 setCoins(topThreeCoins);
             } catch (error) {
@@ -32,7 +31,6 @@ function TrendingCoinsCard() {
                         key={coin.item.id}
                         className="flex justify-between items-center py-2 border-b last:border-none"
                     >
-                        {/* Coin Info */}
                         <div className="flex items-center space-x-3">
                             <img
                                 src={coin.item.thumb}
@@ -41,7 +39,7 @@ function TrendingCoinsCard() {
                             />
                             <span className="text-sm font-medium">{`${coin.item.name} (${coin.item.symbol.toUpperCase()})`}</span>
                         </div>
-                        {/* Percentage Change */}
+
                         <span
                             className={`font-semibold ${coin.item.data.price_change_percentage_24h.usd > 0 ? "text-green-500" : "text-red-500"
                                 }`}

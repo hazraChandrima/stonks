@@ -15,7 +15,6 @@ const DashboardChart = ({ id }) => {
                     fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365`).then((res) => res.json()),
                 ]);
 
-                // Calculate 52-week high/low
                 const prices = marketChartData.prices.map(([_, price]) => price);
                 const high = Math.max(...prices);
                 const low = Math.min(...prices);

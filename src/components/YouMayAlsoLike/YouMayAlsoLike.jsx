@@ -45,16 +45,16 @@ const YouMayAlsoLike = () => {
             const formattedData = data.coins.map((item) => ({
                 name: item.item.name,
                 image: item.item.small,
-                current_price: item.item.data.price, // Mock price (replace with real data)
-                sparkline_url: item.item.data.sparkline, // Placeholder URL for sparkline
-                price_change_percentage_24h: item.item.data.price_change_percentage_24h.usd, // Mock percentage change
+                current_price: item.item.data.price, 
+                sparkline_url: item.item.data.sparkline, 
+                price_change_percentage_24h: item.item.data.price_change_percentage_24h.usd, 
             }));
             const reverseFormattedData = data.coins.reverse().map((item) => ({
                 name: item.item.name,
                 image: item.item.small,
-                current_price: item.item.data.price, // Mock price (replace with real data)
-                sparkline_url: item.item.data.sparkline, // Placeholder URL for sparkline
-                price_change_percentage_24h: item.item.data.price_change_percentage_24h.usd, // Mock percentage change
+                current_price: item.item.data.price, 
+                sparkline_url: item.item.data.sparkline, 
+                price_change_percentage_24h: item.item.data.price_change_percentage_24h.usd, 
             }));
             setCoins(formattedData);
             setReverseCoins(reverseFormattedData);
