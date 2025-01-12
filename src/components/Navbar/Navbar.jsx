@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Navbar = () => {
     return (
-        <div className="bg-white z-50 fixed top-0 left-0 w-screen h-16 shadow-md border-b border-gray-300">
+        <div className="hidden md:block bg-white z-50 fixed top-0 left-0 w-screen h-16 shadow-md border-b border-gray-300">
             <div className="px-12 h-full flex items-center justify-between text-sm">
                 <Image
                     src="/koinx.png"

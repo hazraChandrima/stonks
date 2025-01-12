@@ -15,7 +15,7 @@ const Sentiments = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Sentiment</h2>
 
             <div className="mb-8 relative">
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex space-x-4 items-center mb-4">
                     <h3 className="text-lg font-medium text-gray-700">Key Events</h3>
                     <i className="text-gray-400 cursor-pointer" title="Information">ℹ️</i>
                 </div>

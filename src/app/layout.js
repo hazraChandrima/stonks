@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Noto_Sans_Display } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike/YouMayAlsoLike";
+import MobileNavbar from "@/components/Navbar/MobileNavbar";
 
 const sans = Noto_Sans_Display({ subsets: ["latin"] });
 
@@ -15,7 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={sans.className}>
         <Navbar />
-        <div className="flex bg-[#EFF2F5] p-8">
+        <MobileNavbar/>
+        <div className=" bg-[#EFF2F5] p-8">
           {children}
         </div>
         <YouMayAlsoLike/>

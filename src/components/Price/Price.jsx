@@ -50,18 +50,18 @@ function PriceWidget({id}) {
         <div className="p-4 bg-white">
             <div className="mt-5">
                 <span className="text-3xl font-semibold">${coinData.usd}</span>
-                <span className="font-medium text-sm">
+                <span className="font-medium text-sm ml-4 text-gray-700">
                     <span
                         className={
                             coinData.usd_24h_change > 0
-                                ? "text-green-500"
-                                : "text-red-500"
+                                ? "text-green-500 bg-green-50 p-2 rounded-md"
+                                : "text-red-500 bg-red-50 p-2 rounded-md"
                         }
                     >
                         {coinData.usd_24h_change.toFixed(2)}%
                     </span> (24H)
                 </span>
-                <p className="text-gray-500 text-sm">₹{coinData.inr}</p>
+                <p className="text-gray-700 text-md font-semibold">₹{coinData.inr}</p>
                 
             </div>
         </div>

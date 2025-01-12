@@ -22,13 +22,13 @@ const CoinCard = ({ coin }) => {
                     {coin.price_change_percentage_24h.toFixed(2)}%
                 </span>
             </div>
-            <div className="text-2xl font-bold mt-2">${coin.current_price.toFixed(2)}</div>
+            <div className="text-xl mt-2">${coin.current_price.toFixed(2)}</div>
             <Image
                 src={coin.sparkline_url}
                 alt={`${coin.name} sparkline`}
-                className="mt-2 w-full"
-                width={128}
-                height={80}
+                className="mt-2 w-full h-12"
+                width={80}
+                height={20}
             />
         </div>
     );
@@ -66,13 +66,14 @@ const YouMayAlsoLike = () => {
     return (
         <>
         <div className="px-4 py-8 lg:px-16">
-            <h2 className="text-2xl font-bold mb-4">You May Also Like</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">You May Also Like</h2>
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1}
                 navigation
                 breakpoints={{
-                    640: { slidesPerView: 2 },
+                    600: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
                     1024: { slidesPerView: 5 },
                 }}
                 modules={[Navigation]}
@@ -85,13 +86,14 @@ const YouMayAlsoLike = () => {
             </Swiper>
         </div>
             <div className="px-4 py-8 lg:px-16">
-                <h2 className="text-2xl font-bold mb-4">Trending Coins</h2>
+                <h2 className="text-xl font-semibold text-gray-800 mb-4">Trending Coins</h2>
                 <Swiper
                     spaceBetween={20}
                     slidesPerView={1}
                     navigation
                     breakpoints={{
-                        640: { slidesPerView: 2 },
+                        600: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
                         1024: { slidesPerView: 5 },
                     }}
                     modules={[Navigation]}

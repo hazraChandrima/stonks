@@ -79,7 +79,7 @@ function TradingViewWidget({id}) {
                 />
                 <div>
                     <span className="text-lg font-bold">{data?.name || "Crypto"} {data?.symbol?.toUpperCase()}</span>
-                    <span className="bg-gray-500 text-gray-200 text-sm px-2 py-1 rounded mx-4">
+                    <span className="bg-gray-500 text-gray-100 text-sm p-2 rounded-lg mx-4">
                         Rank #{data?.market_cap_rank || "N/A"}
                     </span>
                 </div>
