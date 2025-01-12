@@ -9,6 +9,7 @@ import Tokenomics from "@/components/Charts/Tokenomics";
 import Teams from "@/components/Charts/Teams";
 import KoinXCard from "@/components/Cards/KoinXCard";
 import TrendingCoinsCard from "@/components/Cards/TrendingCoins";
+import HeroChartSmall from "@/components/Charts/HeroChartSmall";
 
 const CompanyWisePage = () => {
     const [activeTab, setActiveTab] = useState("Overview");
@@ -32,19 +33,24 @@ const CompanyWisePage = () => {
         }
     };
 
-    console.log(id);
     return (
-        <div className="bg-[#EFF2F5]">
+        <div className="bg-[#EFF2F5] mb-5">
             <p className="mt-12 text-gray-600">
                 Cryptocurrencies {" >> "}{" "}
                 <span className="text-black font-semibold">{id}</span>
             </p>
-            <div className="flex mt-6 space-x-4 justify-center">
-                <HeroChart id={id} />
-                <div className="hidden md:block flex flex-col space-y-5 justify-between">
-                    <KoinXCard />
-                    <TrendingCoinsCard />
+            <div className="hidden md:block">
+                <div className="flex mt-6 space-x-4 justify-center">
+                    <HeroChart id={id} />
+                    <div className=" flex flex-col space-y-5 justify-between">
+                        <KoinXCard />
+                        <TrendingCoinsCard />
+                    </div>
                 </div>
+            </div>
+            
+            <div className="block md:hidden mt-6">
+                <HeroChartSmall id={id} />
             </div>
 
             <div className="border-b-2 border-gray-300 w-full overflow-x-auto">
@@ -54,7 +60,7 @@ const CompanyWisePage = () => {
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`px-6 mt-5 py-2 text-sm font-medium whitespace-nowrap ${activeTab === tab
+                                className={`px-2 md:px-6 mt-5 py-2 text-sm font-medium whitespace-nowrap ${activeTab === tab
                                         ? "border-b-2 border-blue-500 text-blue-500"
                                         : "text-gray-800 hover:text-blue-600"
                                     }`}

@@ -13,7 +13,7 @@ const Sentiments = () => {
     const nextRef = useRef(null);
 
     return (
-        <div className="p-8 bg-white rounded-lg shadow-lg w-full max-w-5xl mx-auto mt-12">
+        <div className="p-4 md:p-8 bg-white rounded-lg shadow-lg w-full max-w-5xl mx-auto mt-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Sentiment</h2>
 
             <div className="mb-8 relative">
@@ -24,13 +24,13 @@ const Sentiments = () => {
 
                 <button
                     ref={prevRef}
-                    className="absolute z-30 top-1/2 -left-6 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
+                    className="absolute z-30 top-1/2 -left-6 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
                 >
                     <ChevronLeftIcon className="w-6 h-6 text-gray-500" />
                 </button>
                 <button
                     ref={nextRef}
-                    className="absolute z-30 top-1/2 -right-6 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
+                    className="absolute z-30 top-1/2 -right-6 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
                 >
                     <ChevronRightIcon className="w-6 h-6 text-gray-500" />
                 </button>
@@ -86,9 +86,9 @@ const Sentiments = () => {
                     <h3 className="text-lg font-medium text-gray-700">Analyst Estimates</h3>
                     <i className="text-gray-400 cursor-pointer" title="Information">ℹ️</i>
                 </div>
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-4 md:gap-8">
 
-                    <div className="relative w-28 h-28 rounded-full bg-teal-50 flex items-center justify-center">
+                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full bg-teal-50 flex items-center justify-center">
                         <span className="text-teal-600 text-xl font-bold">76%</span>
                     </div>
 

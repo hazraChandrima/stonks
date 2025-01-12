@@ -5,9 +5,9 @@ const Tokenomics = () => {
         <div className="font-sans bg-white mt-12 rounded-xl shadow-md p-6 max-w-5xl mx-auto">
             <h2 className="text-2xl font-semibold mb-5">Tokenomics</h2>
             <h3 className="text-lg font-semibold mb-3">Initial Distribution</h3>
-            <div className="flex items-center mb-5">
+            <div className="flex items-center mb-5 md:space-x-5">
                 <div
-                    className="relative w-36 h-36 rounded-full mr-5"
+                    className="relative w-20 h-20 md:w-28 md:h-28 rounded-full mr-5"
                     style={{
                         background: `conic-gradient(
               #007bff 0% 80%,

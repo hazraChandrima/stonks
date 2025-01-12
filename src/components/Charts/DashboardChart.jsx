@@ -39,7 +39,7 @@ const DashboardChart = ({ id }) => {
     if (error || !data) return <ErrorMessage />;
 
     return (
-        <div className="py-12 px-4">
+        <div className="py-12">
             <div className="mx-auto max-w-5xl bg-white shadow-md rounded-xl p-8">
                 <div className="flex flex-col gap-8">
                     <PerformanceSection data={data} weekHighLow={weekHighLow} />
@@ -128,7 +128,7 @@ const FundamentalsSection = ({ data }) => {
             <h1 className="text-xl font-semibold text-gray-700 mb-6">Fundamentals</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-800">
                 {fundamentals.map((item, index) => (
-                    <div key={index} className="mr-8">
+                    <div key={index} className="md:mr-8">
                         <div className="flex justify-between" key={index}>
                             <p className="text-gray-500">{item.label}</p>
                             <p className="font-medium">{item.value}</p>

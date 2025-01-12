@@ -10,7 +10,7 @@ const Teams = () => {
     ];
 
     return (
-        <div className="max-w-5xl px-8 py-8 bg-white rounded-xl mt-12 shadow-md mx-auto">
+        <div className="max-w-5xl px-4 md:px-8 py-8 bg-white rounded-xl mt-12 shadow-md mx-auto">
             <h2 className="text-2xl font-semibold mb-4">Team</h2>
             <p className="text-gray-600 mb-8 text-sm">
                 Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu nibh. Eget mattis in

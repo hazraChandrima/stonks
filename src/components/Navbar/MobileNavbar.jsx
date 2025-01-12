@@ -30,8 +30,8 @@ const MobileNavbar = () => {
 
     return (
         <div
-            className="z-40 fixed md:hidden block top-0 left-0 h-20 z-50 w-screen bborder-b shadow-lg bg-white pl-8 pr-4">
-            <div className="h-full flex items-center justify-between text-sm">
+            className="z-40 fixed md:hidden block top-0 left-0 h-20 z-50 w-screen border-b shadow-lg bg-white">
+            <div className="h-full flex items-center justify-between text-sm pl-8 pr-4">
                 <Image
                     src="/koinx.png"
                     alt="KoinX logo"
@@ -46,29 +46,28 @@ const MobileNavbar = () => {
             </div>
 
 
-            {isOpen &&
-                <div
-                    className="fixed w-screen overflow-y-scroll h-screen top-20 p-5 pt-0 bg-black opacity-100 flex items-center justify-center"
-                >
-                    <div
-                        className="overflow-y-scroll font-sans mb-10 pb-8 text-slate-200 text-center flex flex-col justify-between h-[52%] w-full max-w-3xl">
-                        {sections.map((key, index) => (
-                            <div key={index}
-                                className="mb-6"
-                            >
-
-                                <h2 className="text-[2.2rem] font-light text-gray-200 opacity-90 mb-2 hover:text-violet-300">
-                                    <Link href={`/${key.link}`} onClick={handleLinkClick}
-                                        className="my-5"
-                                    >
-                                        {key.name}</Link>
-                                </h2>
-                            </div>
-                        ))}
-
+            {isOpen && (
+                <div>
+                    <div className="bg-gradient-to-b from-blue-600 to-[#0045d6] shadow-lg w-screen max-w-md">
+                        <div className="divide-y divide-gray-200">
+                            {sections.map((key, index) => (
+                                <div key={index}>
+                                    <h2 className="text-lg font-medium text-white p-4 hover:bg-gray-100">
+                                        <Link
+                                            href={`/${key.link}`}
+                                            onClick={handleLinkClick}
+                                            className="block w-full"
+                                        >
+                                            {key.name}
+                                        </Link>
+                                    </h2>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            }
+            )}
+
         </div>
 
     );

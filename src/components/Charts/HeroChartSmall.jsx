@@ -40,7 +40,7 @@ function TradingViewWidget({ id }) {
             script.async = true;
             script.innerHTML = `
         {
-          "width": 800,
+          "width": 320,
           "height": 500,
           "symbol": "COINBASE:${idSymbol}USD",
           "timezone": "Asia/Kolkata",
@@ -64,39 +64,36 @@ function TradingViewWidget({ id }) {
         };
     }, [idSymbol]);
 
+
+    if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className="bg-white p-5 w-[840px] rounded-lg shadow-md">
-            {(loading) ? (
-                <div className="w-full">Loading...</div>
-            ) : (
-                <>
-                    <div className="flex items-center gap-4">
-                        <img
-                            src={data?.image?.large || "default-image-url.png"}
-                            alt={`${data?.name || "Crypto"} Logo`}
-                            className="w-10 h-10"
-                        />
-                        <div>
-                            <span className="text-lg font-bold">{data?.name || "Crypto"} {data?.symbol?.toUpperCase()}</span>
-                            <span className="bg-gray-500 text-gray-100 text-sm p-2 rounded-lg mx-4">
-                                Rank #{data?.market_cap_rank || "N/A"}
-                            </span>
-                        </div>
-                    </div>
+        <div className="bg-white p-5 w-full rounded-lg shadow-md">
 
-                    <PriceWidget id={id} />
+            <div className="flex items-center gap-4">
+                <img
+                    src={data?.image?.large || "default-image-url.png"}
+                    alt={`${data?.name || "Crypto"} Logo`}
+                    className="w-10 h-10"
+                />
+                <div>
+                    <span className="text-lg font-bold">{data?.name || "Crypto"} {data?.symbol?.toUpperCase()}</span>
+                    <span className="bg-gray-500 text-gray-100 text-sm p-2 rounded-lg mx-4">
+                        Rank #{data?.market_cap_rank || "N/A"}
+                    </span>
+                </div>
+            </div>
 
-                    <div className="mt-5">
-                        <div
-                            className="tradingview-widget-container w-full max-w-4xl mx-auto"
-                            ref={containerRef}
-                            style={{ height: "500px" }}
-                        ></div>
-                    </div>
-                </>
-            )}
+            <PriceWidget id={id} />
+
+            <div className="mt-5">
+                <div
+                    className="tradingview-widget-container w-full max-w-4xl mx-auto"
+                    ref={containerRef}
+                    style={{ height: "500px" }}
+                ></div>
+            </div>
 
         </div>
     );

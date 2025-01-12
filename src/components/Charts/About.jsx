@@ -54,9 +54,9 @@ const About = ({ id }) => {
     } = cryptoData;
 
     return (
-        <div className="min-h-screen p-12">
+        <div className="min-h-screen">
 
-            <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 mb-8">
+            <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 mb-8 mt-12">
                 <h1 className="text-3xl font-semibold text-gray-800 mb-4">About {name}</h1>
 
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">What is {name}?</h2>
