@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function KoinXCard() {
     return (
-        <div className="bg-[#0052FE] h-fit rounded-lg text-white p-6 flex flex-col items-center space-y-4 w-full mx-auto shadow-lg">
+        <div className="bg-[#0052FE] h-fit rounded-lg text-white p-6 flex flex-col items-center space-y-6 w-full mx-auto shadow-lg">
 
             <h1 className="text-xl font-bold text-center">
                 Get Started with KoinX <br /> for FREE
@@ -15,14 +15,14 @@ function KoinXCard() {
             </p>
 
             <Image
-                src="/idea.svg"
+                src="/get-started.png"
                 alt="KoinX illustration"
-                width={200}
+                width={150}
                 height={100}
                 priority
             />
 
-            <button className="bg-white text-blue-500 px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition flex items-center space-x-2">
+            <button className="bg-white text-black px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition flex items-center space-x-2">
                 <span>Get Started for FREE</span>
                 <span className="text-lg">→</span>
             </button>

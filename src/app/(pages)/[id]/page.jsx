@@ -39,18 +39,17 @@ const CompanyWisePage = () => {
                 Cryptocurrencies {" >> "}{" "}
                 <span className="text-black font-semibold">{id}</span>
             </p>
-            <div className="hidden md:block">
+
+            <div className="">
                 <div className="flex mt-6 space-x-4 justify-center">
-                    <HeroChart id={id} />
-                    <div className=" flex flex-col space-y-5 justify-between">
+                        <div className="w-full h-full">
+                            <HeroChart id={id} />
+                        </div>
+                    <div className="w-1/3 hidden lg:block flex flex-col space-y-6 justify-between">
                         <KoinXCard />
                         <TrendingCoinsCard />
                     </div>
                 </div>
-            </div>
-            
-            <div className="block md:hidden mt-6">
-                <HeroChartSmall id={id} />
             </div>
 
             <div className="border-b-2 border-gray-300 w-full overflow-x-auto">

@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={sans.className}>
 
-                <div className="hidden md:block text-black">
+                <div className="hidden lg:block text-black">
                     <Navbar />
                     <div className="bg-[#EFF2F5] p-8">
                         {children}
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
                     </div>
                 </div>
 
-                <div className="block md:hidden text-black">
+                <div className="block lg:hidden text-black">
                     <MobileNavbar />
                     <div className=" bg-[#EFF2F5] px-4 pb-4 pt-10">
                         {children}

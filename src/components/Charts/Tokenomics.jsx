@@ -1,20 +1,36 @@
 import React from "react";
+import { PieChart, Pie, Cell } from 'recharts';
+
 
 const Tokenomics = () => {
+    const data = [
+        { name: 'Crowdsale investors', value: 80 },
+        { name: 'Foundation', value: 20 },
+    ];
+
+    const colours = ['#0082FF', '#FAA002'];
+
     return (
         <div className="font-sans bg-white mt-12 rounded-xl shadow-md p-6 max-w-5xl mx-auto">
             <h2 className="text-2xl font-semibold mb-5">Tokenomics</h2>
             <h3 className="text-lg font-semibold mb-3">Initial Distribution</h3>
             <div className="flex items-center mb-5 md:space-x-5">
-                <div
-                    className="relative w-20 h-20 md:w-28 md:h-28 rounded-full mr-5"
-                    style={{
-                        background: `conic-gradient(
-              #007bff 0% 80%,
-              #ffcc00 80% 100%
-            )`,
-                    }}
-                ></div>
+                <PieChart width={200} height={200}>
+                    <Pie
+                        data={data}
+                        cx={100}
+                        cy={100}
+                        innerRadius={60}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        paddingAngle={0}
+                        dataKey="value"
+                    >
+                        {data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={colours[index % colours.length]} />
+                        ))}
+                    </Pie>
+                </PieChart>
                 <div>
                     <p className="text-md mb-1">
                         <span className="text-blue-500 font-bold">●</span> Crowdsale investors: 80%

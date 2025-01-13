@@ -40,7 +40,7 @@ function TradingViewWidget({ id }) {
             script.async = true;
             script.innerHTML = `
         {
-          "width": 800,
+          "autosize": true,
           "height": 500,
           "symbol": "COINBASE:${idSymbol}USD",
           "timezone": "Asia/Kolkata",
@@ -67,7 +67,7 @@ function TradingViewWidget({ id }) {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className="bg-white p-5 w-[840px] rounded-lg shadow-md">
+        <div className="bg-white p-5 h-full rounded-lg shadow-md">
             {(loading) ? (
                 <div className="w-full">Loading...</div>
             ) : (

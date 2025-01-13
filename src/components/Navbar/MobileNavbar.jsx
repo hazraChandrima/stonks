@@ -30,7 +30,7 @@ const MobileNavbar = () => {
 
     return (
         <div
-            className="z-40 fixed md:hidden block top-0 left-0 h-20 z-50 w-screen border-b shadow-lg bg-white">
+            className="z-40 fixed top-0 left-0 h-20 z-50 w-screen border-b shadow-lg bg-white">
             <div className="h-full flex items-center justify-between text-sm pl-8 pr-4">
                 <Image
                     src="/koinx.png"
@@ -48,7 +48,7 @@ const MobileNavbar = () => {
 
             {isOpen && (
                 <div>
-                    <div className="bg-gradient-to-b from-blue-600 to-[#0045d6] shadow-lg w-screen max-w-md">
+                    <div className="bg-gradient-to-b from-blue-600 to-[#0045d6] shadow-lg w-screen">
                         <div className="divide-y divide-gray-200">
                             {sections.map((key, index) => (
                                 <div key={index}>
