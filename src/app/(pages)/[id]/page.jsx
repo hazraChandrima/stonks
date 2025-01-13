@@ -9,7 +9,6 @@ import Tokenomics from "@/components/Charts/Tokenomics";
 import Teams from "@/components/Charts/Teams";
 import KoinXCard from "@/components/Cards/KoinXCard";
 import TrendingCoinsCard from "@/components/Cards/TrendingCoins";
-import HeroChartSmall from "@/components/Charts/HeroChartSmall";
 
 const CompanyWisePage = () => {
     const [activeTab, setActiveTab] = useState("Overview");
